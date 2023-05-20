@@ -1,0 +1,195 @@
+// hadibenpm run/
+@import "variables";
+ 
+
+.customer{
+  font-size: 1.3em;
+}
+.error input{
+  color: red;
+  border: 1px solid rgb(184, 17, 17);
+} 
+// span 
+.error span {
+  visibility: visible;
+  // display: none;
+  opacity: 1; 
+  color: red;
+}
+
+.add-minus-icon{
+  // content: "\002B";
+  // border-radius: 10px;
+  padding: 0.5rem;
+  // border: hotpink 1px solid;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+.minus-icon{
+  color: red;
+}
+.add-icon{ color: green;}
+.emptyBasket{
+  // visibility: hidden;
+  display: none;
+}
+.visibleBasket{
+  display: unset;
+}
+
+td {
+  border:black 2px solid;
+  padding: 1em;}
+table {
+border-collapse: collapse;
+caption-side: top;
+width: 100%;
+
+}
+
+
+ p{
+  font-size: 1em;   
+}
+li, didi{
+color: blue;
+
+}
+.bg-pink{
+    background-color: pink;
+}
+
+
+.product-image{
+  height: 190px;
+}
+.body{
+  background-color: blue;
+}
+img{
+  object-fit: cover;
+} 
+
+.buyutelim:hover{
+  font-size: 1.3em;
+  transition: all 0.34s ;
+}
+
+.color-panier{
+  color: rgb(25, 16, 151);
+}
+
+.response{
+  visibility: hidden;
+  // opacity: 0;
+  transition: 0.6s;
+  transform: translate(-200px);
+}
+
+// on cree une classe a injecter
+.show{
+  visibility: visible;
+  // opacity: 1;
+  transform: translate(0);
+}
+.mousemove{
+  height: 50px;
+  width: 50px;
+  border: 2px solid green;
+  position: absolute;
+  border-radius: 50px;
+  transform: translate(-50%,-50%);
+}
+
+.box {
+  background-color: teal;
+  // transform: scale(0.7);
+  transition: ease 0.2s;
+}
+
+
+// .color__choice{
+//   margin: 5em;
+//   padding: 3em;
+// }
+
+// ************ grande -lg   responsive ***********  
+@media all and (max-width: 992px){
+  .card-img-top{
+    height: initial;
+  }
+  
+  // p{
+  //   font-size: 3em;   
+  // }
+
+}
+
+// ********** fin ---  grande -lg *******
+
+
+
+.footer-basic {
+    padding:40px 0;
+    background-color:#ffffff;
+    color:#4b4c4d;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+  
+  /* Credit to https://epicbootstrap.com/snippets/footer-basic */
+
+  

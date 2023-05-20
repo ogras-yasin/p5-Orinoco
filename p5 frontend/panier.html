@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+ <!-- <link rel="stylesheet" href="scss/bootstrap-grid.css" />
+ <link rel="stylesheet" href="scss/bootstrap-reboot.css" /> -->
+ <link rel="stylesheet" href="scss/bootstrap.css" />
+ <link rel="stylesheet" href="code/style.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <title>Orinoco!</title>
+
+  </head>
+
+<body>
+
+
+    
+<header>
+  <div class="bg-pink">
+      <div class="container">
+          <nav class="navbar navbar-padding">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="./index.html">
+                        <img src="images/logo.png" width="200" height="50" alt="Orinoco Logo" />
+                      </a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="./panier.html">
+                      <button class="btn btn-primary" type="submit">Panier</button>
+                    </a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+  <div class="container-fluid ">
+    <div class="row justify-content-center bg-light">
+      <h2 class=" py-3 color-panier"> Panier </h2>
+    </div>
+  </div>
+</header>
+            <!-- emptyBasket -->
+<section id="emptyBasket" class="emptyBasket">
+  <div class="container my-3 py-1">
+      <div class="text-center my-5 shadow p-3 mb-5 bg-body rounded">
+          <h1 class="fs-1 font-weight-bold text-secondary my-5">Oups, votre panier semble vide, commencez vos achats
+          </h1>
+          <a role="button" class="btn btn-secondary text-uppercase my-3" href="./index.html">C'est par
+              ici</a>
+      </div>
+  </div>
+</section>
+<div class="container">
+  <table id="table">
+    <thead>
+      <tr class="text-center ">
+          <th scope="col">Produit</th>
+          <th scope="col">Nom</th>
+          <!-- <th scope="col">Option</th> -->
+          <!-- <th scope="col">Quantité</th> -->
+          <th scope="col">Prix</th>
+          <!-- <th scope="col" class="bg-light">Sous-total</th> -->
+      </tr>
+      
+      </thead>
+      <tbody id="productsBasket">
+        <!--Insertion panier.js-->
+        </tbody>
+
+ 
+  
+    <tfoot>
+      <tr class="text-center fs-5 bg-light">
+          <!-- <th colspan="4" class="bg-white"></th> -->
+          <th colspan="1" class="bg-white"></th>
+          <th colspan="1">Total : </th>
+          <th colspan="1" id="totalPrice"></th>
+      </tr>
+      </tfoot>
+  </table>
+  <button  type="button" class="btn btn-danger mx-5" id="cartClear" >vider le panier</button>
+</div>
+
+
+
+<!-- Table -->
+<section id="section" class="container my-5 align-middle ">
+  <div class=" d-none" id="basket">
+      <p class="text-center fs-4 text-light bg-secondary basket d-none">Contenu du panier</p>
+      <div class="table-responsive">
+          <table class="table table-hover my-auto mx-0">
+              <thead>
+              <tr class="text-center fs-5">
+                  <th scole="col">Produit</th>
+                  <th scole="col">Nom</th>
+                  <!-- <th scole="col">Option</th> -->
+                  <!-- <th scole="col">Quantité</th> -->
+                  <th scole="col">Prix</th>
+                  <!-- <th scole="col" class="bg-light">Sous-total</th> -->
+              </tr>
+              </thead>
+              <tbody id="productsBasket">
+              <!--Insertion panier.js-->
+              </tbody>
+              <tfoot>
+              <tr class="text-center fs-5 bg-light">
+                  <!-- <th colspan="4" class="bg-white"></th> -->
+                  <th colspan="1" class="bg-white"></th>
+                  <th colspan="1">Total : </th>
+                  <th colspan="1" id="totalPrice"></th>
+              </tr>
+              </tfoot>
+          </table>
+      </div>
+      <div class="text-center my-5 row" id="cacheButton">
+          <div class="col-12 col-sm-6 my-4">
+              <button type="submit" class="btn btn-secondary mx-5" id="validationBasket">Valider le panier</button>
+          </div>
+          <div class="col-12 col-sm-6 my-4">
+              <button type="button" class="btn btn-danger mx-5" data-bs-toggle="modal" data-bs-target="#modalClearBasket">Vider le panier</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+            <!-- ******* formulaire ******** -->
+          <div id="form-customer">
+            <div class="container">
+              <form id=formulaire>
+                <div class="form-row">
+                  <div class="col-md-4 mb-3  prenom-container">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" class="form-control" id="prenom"  required>
+                    <span></span>
+                  </div>
+                  <div class="col-md-4 mb-3 nom-container">
+                    <label for="nom">Nom</label>
+                    <input type="text" class="form-control" id="nom"  required>
+                    <span></span>
+                  </div>
+                  <div class="col-md-4 mb-3 email-container">
+                    <label for="email">email</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <p class="input-group-text" id="inputGroupPrepend2">@</p>
+                      </div>
+                      <input type="text" class="form-control" id="email"  aria-describedby="inputGroupPrepend2" required>
+                    </div>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3 adresse-container">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" id="adresse" required>
+                    <span></span>
+                  </div>
+                  <div class="col-md-3 mb-3 codePostal-container">
+                    <label for="codePostal">Code postal</label>
+                    <input type="text" class="form-control" id="codePostal"  required>
+                    <span></span>
+                  </div>
+                  <div class="col-md-3 mb-3 ville-container">
+                    <label for="ville">Ville</label>
+                    <input type="text" class="form-control" id="ville" required>
+                    <span></span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      Accepte les conditions d'utilisation
+                    </label>
+                  </div>
+                </div>
+           
+                    <button class="btn btn-primary mx-5"  type="submit" id="form__submit">Envoyer</button>
+
+              </form>
+            </div>
+          </div>
+
+<div class="footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Orinoco © 2018</p>
+    </footer>
+</div>
+
+<script src="js/panier.js" ></script>
+</body>
+
+</html>
+
+

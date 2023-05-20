@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\serveur P5\\back-end"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "P05",
+		"liveServer.settings.port": 5501
+	}
+}
